@@ -1,0 +1,14 @@
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\YouCNC.Service.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\YouCNC.Service.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\YouCNC.Serial.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\YouCNC.Serial.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\obj\Debug\YouCNC.Service.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\obj\Debug\YouCNC.Service.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\obj\Debug\YouCNC.Service.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.Unity.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.Unity.xml
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
