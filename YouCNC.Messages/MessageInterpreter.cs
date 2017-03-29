@@ -3,14 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YouCNC.Words;
+using System.Diagnostics;
 
 namespace YouCNC.Messages
 {
-    public static class MessageInterpreter
+    public class MessageInterpreter
     {
-        public static string PositionFilter(string receivedmessage)
+        PositionData receivedPositionData = new PositionData();
+        MessageFilter filter = new MessageFilter();
+        protected string receivedData;
+        public void ContentResolver(string message)
         {
-            return "";
+            receivedData = message;
+            if (receivedData.Contains("WPos"))
+            {
+                ReturnPositions();
+            }
+        }
+        public PositionData ReturnPositions()
+        {
+          return filter.GetPositions(receivedData);
         }
     }
 }

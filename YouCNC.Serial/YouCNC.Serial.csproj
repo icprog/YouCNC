@@ -70,9 +70,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YouCNC.Words\YouCNC.Words.csproj">
+    <ProjectReference Include="..\YouCNC.Messages\YouCNC.Messages.csproj">
+      <Project>{3926487B-DDFB-4880-A9F1-88A0DA502801}</Project>
+      <Name>YouCNC.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YouCNC.Words\YouCNC.CommonData.csproj">
       <Project>{3133D7A0-AA53-4132-AFF4-4C2396161831}</Project>
-      <Name>YouCNC.Words</Name>
+      <Name>YouCNC.CommonData</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

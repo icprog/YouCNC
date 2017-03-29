@@ -3,3 +3,5 @@ d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Messages\bin\Debug\YouCNC
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Messages\obj\Debug\YouCNC.Messages.csprojResolveAssemblyReference.cache
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Messages\obj\Debug\YouCNC.Messages.dll
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Messages\obj\Debug\YouCNC.Messages.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Messages\bin\Debug\YouCNC.Words.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Messages\bin\Debug\YouCNC.Words.pdb

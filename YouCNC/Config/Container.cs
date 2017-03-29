@@ -1,20 +1,22 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YouCNC.Service;
+using YouCNC.Service.Interfaces;
 
 namespace YouCNC.Config
 {
-    public static class DIContainer
+    public class DIContainer
     {
-        private static SerialMessager messager = null;
-        public static SerialMessager GetServiceInstance()
+        private static CncService messager = null;
+        public static CncService GetServiceInstance()
         {
             if (messager == null)
             {
-                return new SerialMessager();
+                return new CncService();
             }
             return messager;
         }

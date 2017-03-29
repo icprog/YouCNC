@@ -103,6 +103,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YouCNC.Messages\YouCNC.Messages.csproj">
+      <Project>{3926487B-DDFB-4880-A9F1-88A0DA502801}</Project>
+      <Name>YouCNC.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YouCNC.Serial\YouCNC.Serial.csproj">
       <Project>{E629D2D5-2C54-4261-84BD-17A0FC29DDFC}</Project>
       <Name>YouCNC.Serial</Name>
@@ -110,6 +114,10 @@
     <ProjectReference Include="..\YouCNC.Service\YouCNC.Service.csproj">
       <Project>{E2B04002-29AC-4AF2-BF6A-C597D539E5CC}</Project>
       <Name>YouCNC.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YouCNC.Words\YouCNC.CommonData.csproj">
+      <Project>{3133D7A0-AA53-4132-AFF4-4C2396161831}</Project>
+      <Name>YouCNC.CommonData</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

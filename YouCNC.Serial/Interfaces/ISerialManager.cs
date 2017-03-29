@@ -10,5 +10,8 @@ namespace YouCNC.Serial.Interfaces
     {
         void SendPositionsRequest();
         void SendMessage(string message);
+        bool OpenSerialPort(string portname, int baudrate);
+        bool CloseSerialPort();
+        string[] GetPortNames();
     }
 }

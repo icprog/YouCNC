@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouCNC.Service", "YouCNC.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouCNC.Messages", "YouCNC.Messages\YouCNC.Messages.csproj", "{3926487B-DDFB-4880-A9F1-88A0DA502801}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouCNC.Words", "YouCNC.Words\YouCNC.Words.csproj", "{3133D7A0-AA53-4132-AFF4-4C2396161831}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouCNC.CommonData", "YouCNC.Words\YouCNC.CommonData.csproj", "{3133D7A0-AA53-4132-AFF4-4C2396161831}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

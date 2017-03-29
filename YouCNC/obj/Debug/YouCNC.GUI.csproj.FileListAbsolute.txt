@@ -22,3 +22,7 @@ d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\Ninject.xml
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\obj\Debug\YouCNC.YouCNC.resources
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Service.dll
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Service.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Messages.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Messages.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Words.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Words.pdb

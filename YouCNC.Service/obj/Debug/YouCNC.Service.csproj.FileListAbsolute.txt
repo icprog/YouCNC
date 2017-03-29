@@ -12,3 +12,7 @@ d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microso
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.Unity.xml
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\YouCNC.Messages.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\YouCNC.Messages.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\YouCNC.Words.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Service\bin\Debug\YouCNC.Words.pdb

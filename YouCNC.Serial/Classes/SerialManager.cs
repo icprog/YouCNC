@@ -4,6 +4,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YouCNC.Messages;
 using YouCNC.Serial.Interfaces;
 using YouCNC.Words;
 
@@ -22,7 +23,7 @@ namespace YouCNC.Serial
                 if (serialPort.IsOpen)
                 {
                     serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedEvent);
-                    return true;
+                    return serialPort.IsOpen;
                 }
                 return false;
             }
@@ -38,11 +39,11 @@ namespace YouCNC.Serial
                 if (serialPort.IsOpen)
                 {
                     serialPort.Close();
-                    return true;
+                    return !serialPort.IsOpen;
                 }
                 else if (!serialPort.IsOpen)
                 {
-                    return true;
+                    return !serialPort.IsOpen;
                 }
                 return false;
             }
@@ -52,21 +53,25 @@ namespace YouCNC.Serial
                 throw;
             }
         }
-        
+        public string[] GetPortNames()
+        {
+            return SerialPort.GetPortNames();
+        }
         public void SendPositionsRequest()
         {
             SendMessage(WordsContainer.GetPositions);
         }
-        public static void DataReceivedEvent(object sender, SerialDataReceivedEventArgs e)
+        MessageInterpreter interpreter = new MessageInterpreter();// intance
+        public void DataReceivedEvent(object sender, SerialDataReceivedEventArgs e)
         {
-            SerialPort port = (SerialPort)sender;
-            string indata = port.ReadExisting();
+            serialPort = (SerialPort)sender;
+            string indata = serialPort.ReadExisting();
+            interpreter.ContentResolver(indata);
+            indata = null;
         }
-
         public void SendMessage(string message)
         {
-            serialPort.Write(message);
+            serialPort.WriteLine(message);
         }
-
     }
 }
