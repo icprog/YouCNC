@@ -18,3 +18,5 @@ d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Serial\bin\Debug\YouCNC.W
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Serial\bin\Debug\YouCNC.Words.pdb
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Serial\bin\Debug\YouCNC.Messages.dll
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Serial\bin\Debug\YouCNC.Messages.pdb
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Serial\bin\Debug\AutoMapper.dll
+d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Serial\bin\Debug\AutoMapper.xml

@@ -118,6 +118,5 @@ namespace YouCNC
         {
             _service.SendMessage(OneLineTxtBox.Text);
         }
- 
     }
 }

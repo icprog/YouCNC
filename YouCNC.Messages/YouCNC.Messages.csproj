@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,8 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageFilter.cs" />
-    <Compile Include="MessageInterpreter.cs" />
+    <Compile Include="Config\AutomapperConfig.cs" />
+    <Compile Include="Config\DIContainer.cs" />
+    <Compile Include="Interfaces\IMessageInterpreter.cs" />
+    <Compile Include="Interfaces\IMessageFilter.cs" />
+    <Compile Include="Classes\MessageFilter.cs" />
+    <Compile Include="Classes\MessageInterpreter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +57,9 @@
       <Project>{3133D7A0-AA53-4132-AFF4-4C2396161831}</Project>
       <Name>YouCNC.CommonData</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

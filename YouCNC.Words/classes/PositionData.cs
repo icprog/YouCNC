@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YouCNC.Words
 {
-    public class PositionData : EventArgs
+    public class PositionData : EventArgs, IPositionData
     {
         public string xPopsition { get; set; }
         public string yPosition { get; set; }

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YouCNC.Messages.Config;
 using YouCNC.Words;
+using YouCNC.Words.Config;
 
 namespace YouCNC.Messages
 {
-    public class MessageFilter
+    public class MessageFilter : IMessageFilter
     {
         enum constants
         {
@@ -18,7 +20,8 @@ namespace YouCNC.Messages
             ZERO = 0,
             END_OF_MESSAGE = '\0'
         };
-        PositionData receivedPositionData = new PositionData();
+
+        IPositionData receivedPositionData = CommonDataDIContainer.GetPositionDataInstance();
         public PositionData GetPositions(string receivedData)
         {
             if (receivedData != null)
@@ -54,7 +57,7 @@ namespace YouCNC.Messages
                         receivedPositionData.xPopsition = xPosition;
                         receivedPositionData.yPosition = yPosition;
                         receivedPositionData.zPosition = zPosition;
-                        return receivedPositionData;
+                        return AutoMapper.Mapper.Map<PositionData>(receivedPositionData);
                     }
                     catch (Exception)
                     {

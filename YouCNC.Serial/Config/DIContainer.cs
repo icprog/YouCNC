@@ -8,9 +8,9 @@ namespace YouCNC.Serial.Config
 {
     public static class DIContainer
     {
+        private static SerialManager serial = null;
         public static SerialManager GetSerialManagerInstance()
-        {
-            SerialManager serial = null;
+        {      
             if (serial == null)
             {
                 return new SerialManager();

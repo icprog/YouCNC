@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YouCNC.Messages;
+using YouCNC.Messages.Config;
 using YouCNC.Serial.Interfaces;
 using YouCNC.Words;
 
@@ -61,7 +62,7 @@ namespace YouCNC.Serial
         {
             SendMessage(WordsContainer.GetPositions);
         }
-        MessageInterpreter interpreter = new MessageInterpreter();// intance
+        IMessageInterpreter interpreter = DIContainer.GetMessageInterpreterInstance();
         public void DataReceivedEvent(object sender, SerialDataReceivedEventArgs e)
         {
             serialPort = (SerialPort)sender;
