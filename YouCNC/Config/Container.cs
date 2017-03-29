@@ -14,11 +14,13 @@ namespace YouCNC.Config
         private static CncService messager = null;
         public static CncService GetServiceInstance()
         {
+            
             if (messager == null)
             {
                 return new CncService();
             }
             return messager;
         }
+        
     }
 }

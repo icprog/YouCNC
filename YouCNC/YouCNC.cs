@@ -42,10 +42,6 @@ namespace YouCNC
                 MessageBox.Show("Process Started!");
             }
         }
-        void OnPositionReceived(object source, PositionData e)
-        {
-            yAxisTxtBox.Text = e.yPosition.ToString();
-        }
         void initilaizeYouCncComponents()
         {
             SerialPortNameComboBox.Items.AddRange(_service.GetPortNames());
@@ -117,6 +113,10 @@ namespace YouCNC
         private void OneLineBtn_Click(object sender, EventArgs e)
         {
             _service.SendMessage(OneLineTxtBox.Text);
+        }
+        public void OnPositionsReceived(object source, PositionData positions)
+        {
+            xAxisTxtBox.Text = "received";
         }
     }
 }
