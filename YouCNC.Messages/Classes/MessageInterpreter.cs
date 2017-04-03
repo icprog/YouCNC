@@ -14,29 +14,32 @@ namespace YouCNC.Messages
     {
         PositionData receivedPositionData = CommonDataDIContainer.GetPositionDataInstance();
         IMessageFilter filter = DIContainer.GetMessageFilterInstance();
-        public delegate void PositionsReceivedEventHandler(object source, PositionData positions);
-        public event PositionsReceivedEventHandler PositionsReceived;
-        protected string receivedData;
 
+        public delegate void positionsreceivedeventhandler(object source, EventArgs args);
+        public event positionsreceivedeventhandler PositionsReceived;
+
+        private string receivedData;
+        private List<string> positions = new List<string>();
         public void ContentResolver(string message)
         {
             receivedData = message;
-            if (receivedData.Contains("WPos"))
+            if (message.Contains("WPos"))
             {
                 OnPositionsReceived();
             }
         }
-        public PositionData ReturnPositions()
-        {
-          return filter.GetPositions(receivedData);
-        }
-
         protected virtual void OnPositionsReceived()
         {
-            if (PositionsReceived != null)
+            if(PositionsReceived != null)
             {
-                PositionsReceived(this, ReturnPositions());
+                PositionsReceived(this, EventArgs.Empty);
             }
         }
+
+        public List<String> ReturnPositions()
+        {
+            return positions;
+        }
+
     }
 }

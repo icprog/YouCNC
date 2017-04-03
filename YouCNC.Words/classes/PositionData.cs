@@ -8,8 +8,9 @@ namespace YouCNC.Words
 {
     public class PositionData : EventArgs, IPositionData
     {
-        public string xPopsition { get; set; }
+        public string xPosition { get; set; }
         public string yPosition { get; set; }
         public string zPosition { get; set; }
+        public string limit { get; set; }
     }
 }

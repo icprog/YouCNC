@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,60 +14,36 @@ namespace YouCNC.Messages
     {
         enum constants
         {
+            NUMBER_SEVEN = 7,
+            NUMBER_TWO = 2,
             NUMBER_ONE = 1,
             COLON = ':',
             ARROW_RIGHT = '>',
             ARROW_LEFT = '<',
             ZERO = 0,
-            END_OF_MESSAGE = '\0'
+            END_OF_MESSAGE = '\0',
+            COMMA = ','
         };
 
         IPositionData receivedPositionData = CommonDataDIContainer.GetPositionDataInstance();
-        public PositionData GetPositions(string receivedData)
+        public List<string> GetPositions(string receivedData)
         {
-            if (receivedData != null)
+            if(!string.IsNullOrEmpty(receivedData))
             {
-                int firstIndex = (int)constants.ZERO, secondIndex = (int)constants.ZERO;
-                if (receivedData[0] == (char)constants.ARROW_LEFT)
+                try
                 {
-                    try
-                    {
-                        firstIndex = receivedData.IndexOf((char)constants.COLON);
-                        secondIndex = receivedData.IndexOf((char)constants.ARROW_RIGHT);
-                        string onlyPositions = (char)constants.ARROW_LEFT + receivedData.Substring(firstIndex + (int)constants.NUMBER_ONE, secondIndex - (firstIndex + (int)constants.NUMBER_ONE));
-                        firstIndex = (int)constants.ZERO; secondIndex = (int)constants.ZERO;
-                        string xPosition, yPosition, zPosition, pieceOfString;
-                        firstIndex = receivedData.IndexOf((char)constants.COLON) + (int)constants.NUMBER_ONE;
-                        secondIndex = receivedData.IndexOf((char)constants.ARROW_RIGHT);
-                        pieceOfString = receivedData.Substring(firstIndex, (secondIndex + 1) - firstIndex);
-                        firstIndex = (int)constants.ZERO;
-                        secondIndex = pieceOfString.IndexOf(',');
-                        xPosition = pieceOfString.Substring(firstIndex, secondIndex);
-                        firstIndex = pieceOfString.IndexOf(',');
-                        secondIndex = pieceOfString.IndexOf((char)constants.ARROW_RIGHT);
-                        pieceOfString = pieceOfString.Substring((firstIndex + 1), ((secondIndex) - firstIndex));
-                        firstIndex = (int)constants.ZERO;
-                        secondIndex = pieceOfString.IndexOf(',');
-                        yPosition = pieceOfString.Substring(firstIndex, secondIndex);
-                        firstIndex = pieceOfString.IndexOf(',');
-                        secondIndex = pieceOfString.IndexOf((char)constants.ARROW_RIGHT);
-                        pieceOfString = pieceOfString.Substring((firstIndex + 1), ((secondIndex) - firstIndex));
-                        firstIndex = (int)constants.ZERO;
-                        secondIndex = pieceOfString.IndexOf((char)constants.ARROW_RIGHT);
-                        zPosition = pieceOfString.Substring(firstIndex, secondIndex);
-                        receivedPositionData.xPopsition = xPosition;
-                        receivedPositionData.yPosition = yPosition;
-                        receivedPositionData.zPosition = zPosition;
-                        return AutoMapper.Mapper.Map<PositionData>(receivedPositionData);
-                    }
-                    catch (Exception)
-                    {
-
-                    }
+                    string cutMessage = receivedData.Substring(receivedData.IndexOf((char)constants.COLON) + (int)constants.NUMBER_ONE);
+                    string[] positions = cutMessage.Split((char)constants.COMMA);
+                    //receivedPositionData.limit = positions[3].Substring((int)constants.ZERO, positions[3].IndexOf((char)constants.ARROW_RIGHT)-(int)constants.NUMBER_ONE);
+                    return positions.ToList();
                 }
-                
+                catch (Exception)
+                {
+                    throw;
+                }
             }
             return null;
+        }
     }
 }
-}
+

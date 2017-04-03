@@ -2,8 +2,9 @@
 {
     public interface IPositionData
     {
-        string xPopsition { get; set; }
+        string xPosition { get; set; }
         string yPosition { get; set; }
         string zPosition { get; set; }
+        string limit { get; set; }
     }
 }
