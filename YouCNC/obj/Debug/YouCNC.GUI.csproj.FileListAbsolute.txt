@@ -19,7 +19,6 @@ d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\Microsoft.Pract
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\Ninject.xml
-d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\obj\Debug\YouCNC.YouCNC.resources
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Service.dll
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Service.pdb
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Messages.dll
@@ -28,3 +27,9 @@ d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Words.dl
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\YouCNC.Words.pdb
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\AutoMapper.dll
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC\bin\Debug\AutoMapper.xml
+D:\Documents\Visual Studio 2015\Projects\YouCNC\YouCNC\bin\Debug\MetroFramework.Design.dll
+D:\Documents\Visual Studio 2015\Projects\YouCNC\YouCNC\bin\Debug\MetroFramework.dll
+D:\Documents\Visual Studio 2015\Projects\YouCNC\YouCNC\bin\Debug\MetroFramework.Fonts.dll
+D:\Documents\Visual Studio 2015\Projects\YouCNC\YouCNC\obj\Debug\YouCNC.YouCncForm.resources
+D:\Documents\Visual Studio 2015\Projects\YouCNC\YouCNC\obj\Debug\YouCNC.View.resources
+D:\Documents\Visual Studio 2015\Projects\YouCNC\YouCNC\obj\Debug\YouCNC.GRBLConfiguration.resources

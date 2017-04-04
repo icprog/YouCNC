@@ -25,8 +25,8 @@ namespace YouCNC.Messages
             COMMA = ','
         };
 
-        IPositionData receivedPositionData = CommonDataDIContainer.GetPositionDataInstance();
-        public List<string> GetPositions(string receivedData)
+        PositionData receivedPositionData = CommonDataDIContainer.GetPositionDataInstance();
+        public PositionData GetPositions(string receivedData)
         {
             if(!string.IsNullOrEmpty(receivedData))
             {
@@ -35,12 +35,12 @@ namespace YouCNC.Messages
                     string cutMessage = receivedData.Substring(receivedData.IndexOf((char)constants.COLON) + (int)constants.NUMBER_ONE);
                     string[] positions = cutMessage.Split((char)constants.COMMA);
                     //receivedPositionData.limit = positions[3].Substring((int)constants.ZERO, positions[3].IndexOf((char)constants.ARROW_RIGHT)-(int)constants.NUMBER_ONE);
-                    return positions.ToList();
+                    receivedPositionData.xPosition = positions[0];
+                    receivedPositionData.yPosition = positions[1];
+                    receivedPositionData.zPosition = positions[2];
+                    return receivedPositionData;
                 }
-                catch (Exception)
-                {
-                    throw;
-                }
+                catch (Exception){}
             }
             return null;
         }

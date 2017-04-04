@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\AutomapperConfig.cs" />
     <Compile Include="Interfaces\ICncService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\CncService.cs" />

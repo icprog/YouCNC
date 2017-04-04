@@ -13,27 +13,25 @@ namespace YouCNC.Serial
 {
     public class SerialManager : ISerialManager
     {
-        SerialPort serialPort = new SerialPort();
-        public bool OpenSerialPort(string portname, int baudrate)
+        SerialPort _serialPort;
+        public bool OpenSerialPort(SerialPort serialPort)
         {
             try
             {
-                serialPort.PortName = portname;
-                serialPort.BaudRate = baudrate;
                 serialPort.Open();
                 if (serialPort.IsOpen)
                 {
-                    serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedEvent);
+                    this._serialPort = serialPort;
                     return serialPort.IsOpen;
                 }
                 return false;
             }
             catch (Exception)
             {
-                throw;
+                return false;
             }
         }
-        public bool CloseSerialPort()
+        public bool CloseSerialPort(SerialPort serialPort)
         {
             try
             {
@@ -58,21 +56,20 @@ namespace YouCNC.Serial
         {
             return SerialPort.GetPortNames();
         }
-        public void SendPositionsRequest()
+        public void SendPositionsRequest(SerialPort serialPort)
         {
-            SendMessage(WordsContainer.GetPositions);
+            if (serialPort.IsOpen)
+            {
+                SendMessage(serialPort, WordsContainer.GetPositions);
+            }
         }
-        IMessageInterpreter interpreter = DIContainer.GetMessageInterpreterInstance();
-        public void DataReceivedEvent(object sender, SerialDataReceivedEventArgs e)
+        MessageInterpreter interpreter = DIContainer.GetMessageInterpreterInstance();
+        public void SendMessage(SerialPort serialPort, string message)
         {
-            serialPort = (SerialPort)sender;
-            string indata = serialPort.ReadExisting();
-            interpreter.ContentResolver(indata);
-            indata = null;
-        }
-        public void SendMessage(string message)
-        {
-            serialPort.WriteLine(message);
+            if (serialPort.IsOpen)
+            {
+                _serialPort.WriteLine(message);
+            }
         }
     }
 }

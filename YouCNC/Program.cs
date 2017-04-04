@@ -23,7 +23,7 @@ namespace YouCNC
             Application.SetCompatibleTextRenderingDefault(false);
             AutomapperConfig config = new AutomapperConfig();
             config.CreateMappings();
-            Application.Run(new YouCNC());
+            Application.Run(new YouCncForm());
         }
     }
 }

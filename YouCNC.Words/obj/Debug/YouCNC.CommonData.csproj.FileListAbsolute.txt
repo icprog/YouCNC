@@ -1,7 +1,7 @@
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Words\bin\Debug\YouCNC.Words.dll
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Words\bin\Debug\YouCNC.Words.pdb
-d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Words\obj\Debug\YouCNC.CommonData.csprojResolveAssemblyReference.cache
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Words\obj\Debug\YouCNC.Words.dll
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Words\obj\Debug\YouCNC.Words.pdb
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Words\bin\Debug\AutoMapper.dll
 d:\documents\visual studio 2015\Projects\YouCNC\YouCNC.Words\bin\Debug\AutoMapper.xml
+D:\Documents\Visual Studio 2015\Projects\YouCNC\YouCNC.Words\obj\Debug\YouCNC.CommonData.csprojResolveAssemblyReference.cache

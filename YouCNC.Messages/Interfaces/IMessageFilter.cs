@@ -5,6 +5,6 @@ namespace YouCNC.Messages
 {
     public interface IMessageFilter
     {
-        List<string> GetPositions(string receivedData);
+        PositionData GetPositions(string receivedData);
     }
 }
